@@ -1,0 +1,28 @@
+{% extends 'home/index.html' %}
+{% block content %}
+
+<table class="table">
+
+    <tr scope="thead-dark">
+        <th>ID</th>
+        <th>Username</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>password</th>
+        <th>persona</th>
+    </tr>
+
+    <tr scope="row">
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.firstname}}</td>
+        <td>{{user.lastname}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.persona}}</td>
+        <td><a href="/user/useredit/{{user.id}}" class="btn btn-success">EDIT</a></td>
+    </tr>
+
+</table>
+<a href="/user/userlist" class="btn btn-warning">BACK</a>
+
+{% endblock %}

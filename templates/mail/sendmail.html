@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Django App1</title>
+</head>
+<body>
+<div style = "max-width:470px;">
+    <form method="POST">
+    {{ form.as_p }}
+{% csrf_token %}
+        <button href="#" class="btn btn-primary" type="submit">Submit</button>
+</form>
+</div>
+</body>
+</html>

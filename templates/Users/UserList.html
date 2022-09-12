@@ -1,0 +1,29 @@
+{% extends 'home/index.html' %}
+{% block content %}
+
+<div>
+<table class="table">
+    <tr class="thead-dark">
+        <td>User ID</td>
+        <td>User name</td>
+        <td>First name</td>
+    </tr>
+     {% for user in UserList %}
+    <tr scope="row">
+
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.firstname}}</td>
+        <td><a href="/user/userdetail/{{user.id}}" class="btn btn-warning">Detail</a></td>
+        <td><a class="btn btn-danger" href="/user/userdelete/{{user.id}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+
+
+</table>
+    <a href="/user/useradd" class="btn btn-danger">Add User</a>
+</div>
+
+
+
+{% endblock %}
